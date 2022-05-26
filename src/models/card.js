@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const cardModel = new Schema({
-    id: Number,
     title: String,
     text: String,
     color: String,
