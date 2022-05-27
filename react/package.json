@@ -1,0 +1,30 @@
+{
+  "name": "capmation-keeper",
+  "version": "0.1.0",
+  "description": "Capmation version of keeper notes by google (used for training in react)",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.3.4",
+    "mongoose-timestamp": "^0.6.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
