@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "dotenv": "^16.0.1",
+    "config": "^3.3.7",
     "mongoose": "^6.3.4",
     "mongoose-timestamp": "^0.6.0",
     "react": "16.8.6",

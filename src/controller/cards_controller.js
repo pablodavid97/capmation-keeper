@@ -1,4 +1,8 @@
+const config = require('config');
+
 const cardsController = (Card) => {
+    const { host, port } = config.get('server');
+
     const post = (req, res) => {
         const card = new Card(req.body);
         if (!req.body.title) {
@@ -21,7 +25,7 @@ const cardsController = (Card) => {
           const returnCards = cards.map((card) => {
             const newCard = card.toJSON();
             newCard.links = {};
-            newCard.links.self = `http://${req.headers.host}/api/cards/${card._id}`;
+            newCard.links.self = `${host}:${port}/api/cards/${card._id}`;
             return newCard;
           });
           return res.json(returnCards);
