@@ -1,20 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const config = require('config');
 
 const app = express();
-app.use(cors())
-require('dotenv').config();
+app.use(cors());
 
-const username = process.env.MONGO_USERNAME;
-const password = process.env.MONGO_PWD;
+const username = config.get('db.user');
+const password = config.get('db.pwd');
 
 const db = mongoose.connect(`mongodb+srv://${username}:${password}@capmation-keeper.hpvo5.mongodb.net/capmation-keeper`, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const port = process.env.BACKEND_PORT || 8080;
+const environment = config.get('server.env');
+const host = config.get('server.host');
+const port = config.get('server.port');
 const Card = require('./models/card');
 const cardRouter = require('./routes/card_router')(Card);
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -25,8 +26,8 @@ app.get('/', (req, res) => {
 });
 
 app.server = app.listen(port, () => {
-    console.log(`Process.env.ENV: ${process.env.ENV}`);
-    console.log(`Running on port ${port}`);
+    console.log(environment);
+    console.log(`Server is running on ${host}:${port}`);
 });
 
 module.exports = app;

@@ -1,9 +1,10 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 import Note from './Note';
+import configData from '../config.json';
 
 function List(){
  const [list, setList] = useState([]);
- const url = 'http://localhost:8080/api/cards';
+ const url = `${configData.SERVER_URL}/cards`;
 
  useEffect(()=>{
   fetch(url)
