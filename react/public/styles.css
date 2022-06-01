@@ -54,3 +54,31 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+.new-btn {
+  font-size: 3.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #235690;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-popup {
+  background: white;
+  display: block;
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #000000;
+  z-index: 9;
+}
