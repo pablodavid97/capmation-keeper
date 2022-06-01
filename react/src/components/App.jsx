@@ -8,12 +8,10 @@ import { NoteListProvider } from "../contexts/NoteListContext";
 function App() {
     return (
         <NoteListProvider>
-            <div>
-                <Header />
-                <CreateForm />
-                <NoteList />
-                <Footer />
-            </div>
+            <Header />
+            <CreateForm />
+            <NoteList />
+            <Footer />
         </NoteListProvider>
     );
 }
