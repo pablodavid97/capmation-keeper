@@ -16,7 +16,7 @@ function List() {
 
     noteContext.setNoteList(list);
     return (
-        <div>
+        <div className="notelist-container">
             {noteContext.noteList.map((note) => (
                 <Note
                     key={note._id}
